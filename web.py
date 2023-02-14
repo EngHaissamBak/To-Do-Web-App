@@ -18,9 +18,14 @@ def add_todo():
     todos.append(todo) # add the todo element in todos list
     funcfiletodos.write_todos(todos) # call the function to write the new todos list to file .txt
 
+#to make my web app to fit on the width of the browser instead of fixed and to be used with mobile
+st.set_page_config(layout="wide")
+
 st.title("My To do App")
 st.subheader("This is my to do app.")
-st.write("This application is to increase your productivity")
+st.write("This application is to increase your <b>productivity</b>",
+         unsafe_allow_html=True)
+#unsafe_allow_html= True , i use it when i use html tags in .write , such as <b></b> , <h2></h2>
 #st.checkbox("Buy groceries.")
 #st.checkbox("Throw the trash.")
 
@@ -44,5 +49,5 @@ for index, todo in enumerate(todos):
 st.text_input(label="Add a todo:", placeholder="Enter a todo..." , on_change=add_todo, key="newtodo")
 
 # create a label for the coder
-st.text("Coded by: Eng. Haissam Bakri")
+st.write("<b>Coded by: Eng. Haissam Bakri</b>",unsafe_allow_html=True)
 #st.session_state
