@@ -1,5 +1,5 @@
 #function file (backend)
-PATH = r"C:\Users\admin\Desktop\PYTHON APP1\sec19_webapps\todos.txt"
+PATH = "todos.txt"
 # when you have your files in folder in a project folder always put full file path
 # if it is directly inside the project folder no need just name of file.format
 # create a function that reads todos list from a file
